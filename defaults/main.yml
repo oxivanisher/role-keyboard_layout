@@ -1,2 +1,7 @@
 ---
 # defaults file for keyboard_layout
+keyboard_layout_model: pc105
+keyboard_layout_layout: ch
+keyboard_layout_variant:
+keyboard_layout_options:
+keyboard_layout_backspace: guess
