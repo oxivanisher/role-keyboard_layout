@@ -1,4 +1,9 @@
 ---
+- name: Ensute that keyboard-configuration is installed
+  ansible.builtin.package:
+    name: keyboard-configuration
+    state: present
+
 - name: Configure keyboard model
   ansible.builtin.lineinfile:
     path: /etc/default/keyboard
