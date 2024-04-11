@@ -3,33 +3,45 @@
   ansible.builtin.package:
     name: keyboard-configuration
     state: present
+  become: true
+  become_user: root
 
 - name: Configure keyboard model
   ansible.builtin.lineinfile:
     path: /etc/default/keyboard
     regexp: "^XKBMODEL="
     line: 'XKBMODEL="{{ keyboard_layout_model }}"'
+  become: true
+  become_user: root
 
 - name: Configure keyboard layout
   ansible.builtin.lineinfile:
     path: /etc/default/keyboard
     regexp: "^XKBLAYOUT="
     line: 'XKBLAYOUT="{{ keyboard_layout_layout }}"'
+  become: true
+  become_user: root
 
 - name: Configure keyboard variant
   ansible.builtin.lineinfile:
     path: /etc/default/keyboard
     regexp: "^XKBVARIANT="
     line: 'XKBVARIANT="{{ keyboard_layout_variant }}"'
+  become: true
+  become_user: root
 
 - name: Configure keyboard options
   ansible.builtin.lineinfile:
     path: /etc/default/keyboard
     regexp: "^XKBOPTIONS="
     line: 'XKBOPTIONS="{{ keyboard_layout_options }}"'
+  become: true
+  become_user: root
 
 - name: Configure keyboard backspace
   ansible.builtin.lineinfile:
     path: /etc/default/keyboard
     regexp: "^BACKSPACE="
     line: 'BACKSPACE="{{ keyboard_layout_backspace }}"'
+  become: true
+  become_user: root
