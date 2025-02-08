@@ -1,5 +1,6 @@
 keyboard_layout
 =========
+[![Ansible Lint](https://github.com/oxivanisher/role-keyboard_layout/actions/workflows/ansible-lint.yml/badge.svg)](https://github.com/oxivanisher/role-keyboard_layout/actions/workflows/ansible-lint.yml)
 
 Configure the debian hardware keyboard
 
